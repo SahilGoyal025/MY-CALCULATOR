@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<script>
+	var x;
+	
+	function f1(x)
+	{
+			document.getElementById("exp").value=document.getElementById("exp").value+x;
+			
+	}
+	function f2()
+	{
+		var y = eval(document.getElementById("exp").value);
+		if(y===Infinity)
+			{	document.getElementById("exp").value="ERROR";
+				alert("ERROR :- DIVIDE BY 0");
+			}
+		else
+ 			{document.getElementById("exp").value=y;}
+	}
+	function f4()
+	{
+		document.getElementById("exp").value=document.getElementById("exp").value.substring(0,document.getElementById("exp").value.length-1);
+	}		
+
+	</script>
+	<title> CALCULATOR </title>
+</head>
+<body style="background-color:lightblue ;text-align:center">
+
+	<br><br><br><br><br>
+	<h1 style="background color:red ;font-size:50px; font-family:verdana"><b><i> <marquee> MY CALCULATOR </marquee></b></i></h1>
+	<button style="background-color:Black ; height:350px ; width:310px">	
+	<input type="button" style=" background-color:red; height:55px; width:55px" value="Clr"  onClick="f4()"> 
+	<input type="text"   style="height:50px;width:188px ;color:navy ;font-size:20px;text-align:right" id="exp" >
+	<br>
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="7" onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="8" onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="9" onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="+" onClick="f1(this.value)" />
+	<br>
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="4" onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="5" onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="6" onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="-" onClick="f1(this.value)" />
+	<br>
+	<input type="button"  style="  background-color:lightgray; height:60px; width:60px"  value="1"onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="2" onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="3" onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="*" onClick="f1(this.value)" />
+	<br>
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="." onClick="f1(this.value)" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="0" onClick="f1(this.value)" />
+	<input type="submit"  style=" background-color:limegreen; height:60px; width:60px"  value="=" onClick="f2()" />
+	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="/" onClick="f1(this.value)" />
+	</button>
+		
+	
+
+</body>
+</html>
