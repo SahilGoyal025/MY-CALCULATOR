@@ -3,11 +3,11 @@
 <head>
 	<script>
 	var x;
-	
+
 	function f1(x)
 	{
 			document.getElementById("exp").value=document.getElementById("exp").value+x;
-			
+
 	}
 	function f2()
 	{
@@ -22,12 +22,12 @@
 	function f4()
 	{
 		document.getElementById("exp").value=document.getElementById("exp").value.substring(0,document.getElementById("exp").value.length-1);
-	}	
+	}
 	function f5()
 	{
 		document.getElementById("exp").value="";
 	}
-	
+
 	document.addEventListener("keydown",function(event){
 		var key=event.keyCode;
 		if(key===13)
@@ -37,7 +37,7 @@
 		else if(event.which>=48 && event.which<=57)
 			{document.getElementById("exp").value += key-48;}
 		else if(event.which>=96 && event.which<=105)
-			{document.getElementById("exp").value += key-96;}		
+			{document.getElementById("exp").value += key-96;}
 		else if(event.which==107)
 			{document.getElementById("exp").value += "+";}
 		else if(event.which==109)
@@ -50,13 +50,13 @@
 			document.getElementById("exp").value += "*";
 		else if(event.which==8)
 			f4();
-		
-	}
+
+	});
 
 	</script>
 	<title> CALCULATOR </title>
 </head>
-<body style="background-color:lightblue ;text-align:center"; onKeypress=onpress_enter()>
+<body style="background-color:lightblue ;text-align:center">
 	
 	<br><br><br><br><br>
 	<h1 style="background color:red ;font-size:50px; font-family:verdana"><b><i> <mark>MY CALCULATOR </mark></b></i></h1>
@@ -64,7 +64,7 @@
 	
 	<input type="text"   style="height:50px;width:250px ;color:navy ;font-size:20px;text-align:right ; font-family:orbitron" id="exp" >
 	<br><br>
-	<input type="button" style=" background-color:red; height:60px; width:60px" value="Del"  onClick="f4()"> 
+	<input type="button" style=" background-color:red; height:60px; width:60px" value="Clr"  onClick="f4()"> 
 	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="(" onClick="f1(this.value)" />	
         <input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value=")" onClick="f1(this.value)" />
 	<input type="button"  style=" background-color:red; height:60px; width:60px"  value="AC" onClick="f5()" />
@@ -89,8 +89,5 @@
 	<input type="button"  style=" background-color:limegreen; height:60px; width:60px"  value="=" onClick="f2()"  />
 	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="/" onClick="f1(this.value)" />
 	</button>
-	
-	
-
-</body>
+	</body>
 </html>
