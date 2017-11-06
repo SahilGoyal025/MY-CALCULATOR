@@ -48,6 +48,10 @@
 			document.getElementById("exp").value += "/";
 		else if(event.which==106)
 			document.getElementById("exp").value += "*";
+		else if(event.which==219)				/* for curved open bracket*/
+			document.getElementById("exp").value += "(";
+		else if(event.which==221)				/* for curved closed bracket*/
+			document.getElementById("exp").value += ")";
 		else if(event.which==8)           //when backspace is pressed
 			f4();
 
