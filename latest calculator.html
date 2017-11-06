@@ -27,22 +27,30 @@
 	{
 		document.getElementById("exp").value="";
 	}
-	function onpress_enter()
-	{
+	
+	document.addEventListener("keydown",function(event){
 		var key=event.keyCode;
 		if(key===13)
 		{
-			var y = eval(document.getElementById("exp").value);
-		if(y===Infinity)
-			{	document.getElementById("exp").value="ERROR";
-				alert("ERROR :- DIVIDE BY 0");
-			}
-		else
- 			{document.getElementById("exp").value = y;  }
-			//key=NULL;
+			f2();
 		}
-		else
-		{ return false;}
+		else if(event.which>=48 && event.which<=57)
+			{document.getElementById("exp").value += key-48;}
+		else if(event.which>=96 && event.which<=105)
+			{document.getElementById("exp").value += key-96;}		
+		else if(event.which==107)
+			{document.getElementById("exp").value += "+";}
+		else if(event.which==109)
+			document.getElementById("exp").value += "-";
+		else if(event.which==110)
+			document.getElementById("exp").value += ".";
+		else if(event.which==111)
+			document.getElementById("exp").value += "/";
+		else if(event.which==106)
+			document.getElementById("exp").value += "*";
+		else if(event.which==8)
+			f4();
+		
 	}
 
 	</script>
