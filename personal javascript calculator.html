@@ -4,12 +4,12 @@
 	<script>
 	var x;
 
-	function f1(x)
+	function f1(x)            /* method to get value of clicked button*/
 	{
 			document.getElementById("exp").value=document.getElementById("exp").value+x;
 
 	}
-	function f2()
+	function f2()		/* method to evaluate the algebraic expression*/
 	{
 		var y = eval(document.getElementById("exp").value);
 		if(y===Infinity)
@@ -19,11 +19,11 @@
 		else
  			{document.getElementById("exp").value = y;  }
 	}
-	function f4()
+	function f4()               /* method  for backspacing or deletion one character from string*/ 
 	{
 		document.getElementById("exp").value=document.getElementById("exp").value.substring(0,document.getElementById("exp").value.length-1);
 	}
-	function f5()
+	function f5()              /* method for clearing the whole display*/
 	{
 		document.getElementById("exp").value="";
 	}
@@ -48,7 +48,7 @@
 			document.getElementById("exp").value += "/";
 		else if(event.which==106)
 			document.getElementById("exp").value += "*";
-		else if(event.which==8)
+		else if(event.which==8)           //when backspace is pressed
 			f4();
 
 	});
@@ -89,5 +89,5 @@
 	<input type="button"  style=" background-color:limegreen; height:60px; width:60px"  value="=" onClick="f2()"  />
 	<input type="button"  style=" background-color:lightgray; height:60px; width:60px"  value="/" onClick="f1(this.value)" />
 	</button>
-	</body>
+</body>
 </html>
